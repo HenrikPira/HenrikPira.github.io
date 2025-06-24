@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigation Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-
-<h1>Henrik Pira</h1>
-<p>This is a test.</p>
-
+  <div class="container">
+    <h1>Choose a Page</h1>
+    <a href="games.html" class="button">Games</a>
+    <a href="renders.html" class="button">Renders</a>
+  </div>
 </body>
 </html>
