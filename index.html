@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Navigation Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Navigation</title>
   <style>
     body {
       margin: 0;
@@ -14,33 +14,54 @@
       align-items: center;
       height: 100vh;
       color: #fff;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .container {
       text-align: center;
+      animation: slideUp 1.2s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
       margin-bottom: 40px;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .button {
       display: inline-block;
-      padding: 15px 30px;
-      margin: 10px;
+      padding: 15px 35px;
+      margin: 12px;
       font-size: 1.2rem;
       text-decoration: none;
       color: #fff;
       background-color: #4CAF50;
       border: none;
-      border-radius: 8px;
-      transition: background-color 0.3s, transform 0.2s;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      animation: pulse 2s infinite;
     }
 
     .button:hover {
       background-color: #45a049;
-      transform: scale(1.05);
+      transform: scale(1.08);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+      70% { box-shadow: 0 0 0 12px rgba(76, 175, 80, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
     }
   </style>
 </head>
