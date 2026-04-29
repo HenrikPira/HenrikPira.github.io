@@ -160,9 +160,18 @@
       text-align: left;
     }
 
-    a.game-item:hover .game-title,
-    a.game-item:hover .description {
-      text-decoration: underline;
+    .sketchfab-embed-wrapper{
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+
+    .sketchfab-embed-wrapper iframe{
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
     }
   </style>
 </head>
@@ -171,8 +180,6 @@
   <header>
     <h1><a href="index.html">Henrik Pira</a></h1>
     <nav>
-      <a href="index.html">Projects</a>
-      <a href="#">About</a>
       <a href="#">Contact</a>
     </nav>
   </header>
@@ -182,43 +189,18 @@
       <a href="jamGames.html" class="side-link">Game jams</a>
       <a href="steamGames.html" class="side-link">steam games</a>
       <h1>Temp</h1>
+        <iframe 
+          title="Guitar 3D Model"
+          frameborder="0"
+          allowfullscreen
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+          allow="autoplay; fullscreen; xr-spatial-tracking"
+          src="https://sketchfab.com/models/466e77ee8f5c4ceba27f2cb181b8b3bb/embed">
+        </iframe>
     </div>
 
     <ul class="game-list" id="gameList"></ul>
   </div>
-
-  <script>
-    const games = [
-      {
-        title: "Cave crawl",
-        description: "Top down shooter, where you have to protect a glass of water from overflowing and ruining a painting.",
-        url: "https://henrikpira.itch.io/overflow",
-        staticImg: "assets/overflow.png",
-        animatedImg: "assets/overflow.gif"
-      }
-    ];
-
-    const gameList = document.getElementById("gameList");
-
-    games.forEach(game => {
-      const li = document.createElement("li");
-
-      li.innerHTML = `
-        <a class="game-item" href="${game.url}" target="_blank" rel="noopener noreferrer">
-          <div class="game-title">${game.title}</div>
-          <div class="content-row">
-            <div class="image-container">
-              <img class="game-image static-image" src="${game.staticImg}" alt="${game.title} static">
-              <img class="game-image animated-image" src="${game.animatedImg}" alt="${game.title} animated">
-            </div>
-            <div class="description">${game.description}</div>
-          </div>
-        </a>
-      `;
-
-      gameList.appendChild(li);
-    });
-  </script>
-
 </body>
 </html>
